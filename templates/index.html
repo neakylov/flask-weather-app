@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="weather">
+                <div class="weather-header">
+                    <div class="weather-cont">
+                        <img src="../static/img/weather-icon.png" alt="" class="icon">
+                        <h3 class="weather-text">Weather</h3>
+                    </div>
+                </div>
+                <form id="form" class="search-form" action='' method="POST">
+                    <div class="form-input">
+                        <div class="city">
+                            <label class="city-label" for="city">Город*</label>
+                            <input id='city' type="text" class="city-input" placeholder="Название города" name="city">
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="sbt-btn btn-set">Узнать погоду</button>
+                        </div>
+                    </div>
+                    {% if current %}
+                    <div class="request">
+                        <div class="header">
+                            <img src="{{ current.img }}" alt="" class="post-cloud">
+                            <h4 class="header-text">{{ current.name }}, {{ current.country }}</h4>
+                        </div>
+                        <hr class="header-hr">
+                        <div class="info">
+                            <div class="temperature">
+                                <h6 class="temp-info">
+                                    +{{ current.temperature }}°C, 
+                                </h6>
+                                <h6 class="temp-info cloudy">
+                                    {{ current.cloudy }}
+                                </h6>
+                            </div>
+                            <div class="localtime">
+                                <h6 class="localtime-header">Местное время: {{ current.localtime }}</h6>
+                            </div>
+                            <div class="forecast">
+                                {% for day in forecast %}
+                                <a href="/{{ day.date }}" class="link">
+                                    <div class="forecast-item">
+                                        <img src="{{ day.day.condition.icon }}" alt="" class="forecast-img">
+                                        <h6 class="forecast-temp">
+                                            +{{ day.day.maxtemp_c }}
+                                        </h6>
+                                        <h6 class="forecast-day">
+                                            {{ day.date }}
+                                        </h6>
+                                    </div>
+                                </a>
+                                {% endfor %}
+                            </div>  
+                        </div>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
