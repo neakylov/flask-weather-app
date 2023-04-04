@@ -1,0 +1,266 @@
+body {
+    width: 100%;
+    height: 100vh;
+    background: violet;
+    background-image: url('../img/cloud.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.weather {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 14px;
+    box-shadow: 0px 6px 20px #f0ba81, 0px 51px 69px rgb(240, 186, 129);
+}
+
+.weather-header {
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    color: inherit;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    text-align: center;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-text {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.weather-cont {
+    display: flex;
+    margin: auto;
+}
+
+.search-form {
+    width: 600px;
+    height: 370px;
+}
+
+.form-city {
+    margin-left: 10px;
+}
+
+.city {
+    margin-bottom: 1rem;
+}
+/* стили для label */
+.city-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    margin-top: 0px;
+    font-size: 1.5ex;
+}
+/* стили для input */
+.city-input {
+    display: block;
+    width: 350px;
+    height: 35px;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-wrap {
+    border-radius: 14px;
+    border: 3px solid black;
+    box-shadow: 0px 6px 20px #f0ba81, 0px 51px 69px rgb(240, 186, 129);
+}
+
+.form-input {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.sbt-btn {
+    margin-top: 21px;
+    height: 35px;
+    width: 150px;
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+}
+.btn-set {
+    background: rgb(255,151,0);
+    border: none;
+    z-index: 1;
+}
+.btn-set:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-color: #eaf818;
+    background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5);
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
+.btn-set:hover {
+    color: #000;
+}
+.btn-set:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+.btn-set:active {
+    top: 2px;
+}
+
+
+.button {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.card-body {
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+}
+
+.request {
+    margin-left: 50px;
+}
+
+.header {
+    display: flex;
+}
+
+.header-text {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.header-hr {
+    margin-right: 50px;
+    margin-top: 0px;
+}
+
+.temperature {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.img-temp {
+    width: 13px;
+    height: 35px;
+}
+
+.temp-info {
+    font-size: 1.2rem;
+}
+
+.cloudy {
+    margin-left: 5px;
+}
+
+.localtime-header {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.forecast {
+    display: flex;
+    margin-right: 50px;
+}
+
+.forecast-item {
+    width: 65px;
+    margin-right: 10px;
+}
+
+.forecast-item:hover {
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.forecast-item:last-child {
+    margin-right: 0px;
+}
+
+.forecast-temp {
+    text-align: center;
+    margin-top: -68px;
+    margin-left: 23px;
+}
+
+.forecast-day {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 46px;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+}
+
+.link:first-child {
+    margin-left: -10px;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.more-info {
+    width: 500px;
+    height: 500px;
+}
